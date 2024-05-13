@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import {
   StyleSheet,
@@ -7,17 +8,14 @@ import {
   TextInput,
   SafeAreaView
 } from 'react-native';
+import AuthStackNavigator from './src/navigation/AuthStackNavigator';
 
 function App(): JSX.Element {
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text></Text>
-        <Button title='버튼 이름' onPress={() => console.log("클릭!")}></Button>
-        <TextInput />
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AuthStackNavigator />
+    </NavigationContainer>
   );
 }
 
